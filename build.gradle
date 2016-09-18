@@ -1,0 +1,19 @@
+apply plugin: 'scala'
+
+repositories{
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies{
+    compile 'com.typesafe:config:1.0.2'
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile "org.scala-lang:scala-library:2.11.7"
+}
+
+task run(type: JavaExec, dependsOn: classes) {
+    main = 'net.augerhandle.hello.App'
+    classpath sourceSets.main.runtimeClasspath
+    classpath configurations.runtime
+}
