@@ -1,4 +1,4 @@
-# hello-scala-sbt
+# hello-scala-gradle
 
 ## What is this?
 
